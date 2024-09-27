@@ -51,8 +51,56 @@ namespace Modules_lab2_IOForm
                 PasswordOutput.Text = user.Password;
                 NameOutput.Text = user.Name;
                 LastnameOutput.Text = user.Lastname;
-                DoBOutput.Text = user.DoB;
-                EducationOutput.Text = user.Education;
+                string[] dob = user.DoB.Split('.');
+                DoBOutputBoxDay.Text = dob[0];
+                DoBOutputBoxMonth.Text = dob[1];
+                DoBOutputBoxYear.Text = dob[2];
+                int eduIndex = 0;
+                switch (user.Education)
+                {
+                    case "None":
+                        eduIndex = 0; break;
+                    case "Low":
+                        eduIndex = 1; break;
+                    case "Medium":
+                        eduIndex = 2; break;
+                    case "High":
+                        eduIndex = 3; break;
+                }
+                EducationOutput.SelectedIndex = eduIndex;
+            }
+        }
+        private void ResetOutput()
+        {
+            LoginOutput.Text = "N/A";
+            PasswordOutput.Text = "N/A";
+            NameOutput.Text = "N/A";
+            LastnameOutput.Text = "N/A";
+            DoBOutputBoxDay.Text = "DD";
+            DoBOutputBoxMonth.Text = "MM";
+            DoBOutputBoxYear.Text = "YYYY";
+        }
+
+        private void RemoveUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (OutputComboBox.SelectedItem is User user)
+            { 
+                Users.Remove(user);
+            }
+            OutputComboBox.Items.Refresh();
+            ResetOutput();
+        }
+
+        private void EditUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (OutputComboBox.SelectedItem is User user)
+            {
+                user.Login = LoginOutput.Text;
+                user.Password = PasswordOutput.Text;
+                user.Name = NameOutput.Text;
+                user.Lastname = LastnameOutput.Text;
+                user.DoB = $"{DoBOutputBoxDay.Text}.{DoBOutputBoxMonth.Text}.{DoBOutputBoxYear.Text}";
+                user.Education = EducationOutput.Text;
             }
         }
     }

@@ -24,5 +24,10 @@ namespace Modules_lab2_IOForm
             DoB = dob;
             Education = education;
         }
+
+        public override string ToString()
+        {
+            return Login;
+        }
     }
 }

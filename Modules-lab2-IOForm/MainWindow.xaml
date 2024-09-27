@@ -36,36 +36,43 @@
                         <TextBlock Text="High"/>
                     </ComboBox>
                     <Button Name="InputButton" Content="Save" Width="120" Height="40" HorizontalAlignment="Left" Click="InputButton_Click"/>
+                    <TextBlock Name="InputError" HorizontalAlignment="Left"/>
                 </StackPanel>
             </TabItem>
             <TabItem Header="Output">
                 <StackPanel HorizontalAlignment="Left">
                     <ComboBox Name="OutputComboBox" DisplayMemberPath="Login" Width="120" SelectionChanged="OutputComboBox_SelectionChanged"/>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Login: "/>
-                        <TextBlock Name="LoginOutput" Text="N/A"/>
+                        <StackPanel>
+                            <TextBlock Text="Login: " Height="20"/>
+                            <TextBlock Text="Password: " Height="20"/>
+                            <TextBlock Text="Name: " Height="20"/>
+                            <TextBlock Text="Lastname: " Height="20"/>
+                            <TextBlock Text="DoB: " Height="20"/>
+                            <TextBlock Text="Education: " Height="20"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBox Name="LoginOutput" Text="N/A" Height="20" Width="100"/>
+                            <TextBox Name="PasswordOutput" Text="N/A" Height="20" Width="100"/>
+                            <TextBox Name="NameOutput" Text="N/A" Height="20" Width="100"/>
+                            <TextBox Name="LastnameOutput" Text="N/A" Height="20" Width="100"/>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBox Name="DoBOutputBoxDay" Width="20" HorizontalAlignment="Left" Text="DD" MaxLines="1" MaxLength="2"/>
+                                <TextBlock Text=" . "/>
+                                <TextBox Name="DoBOutputBoxMonth" Width="20" HorizontalAlignment="Left" Text="MM" MaxLength="2" MaxLines="1"/>
+                                <TextBlock Text=" . "/>
+                                <TextBox Name="DoBOutputBoxYear" Width="40" HorizontalAlignment="Left" Text="YYYY" MaxLines="1" MaxLength="4"/>
+                            </StackPanel>
+                            <ComboBox Name="EducationOutput" Text="N/A" Height="20" Width="100">
+                                <TextBlock Text="None"/>
+                                <TextBlock Text="Low"/>
+                                <TextBlock Text="Middle"/>
+                                <TextBlock Text="High"/>
+                            </ComboBox>
+                        </StackPanel>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Password: "/>
-                        <TextBlock Name="PasswordOutput" Text="N/A"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Name: "/>
-                        <TextBlock Name="NameOutput" Text="N/A"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Lastname: "/>
-                        <TextBlock Name="LastnameOutput" Text="N/A"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="DoB: "/>
-                        <TextBlock Name="DoBOutput" Text="N/A"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Education: "/>
-                        <TextBlock Name="EducationOutput" Text="N/A"/>
-                    </StackPanel>
-                    <Button Name="RemoveUserButton" Content="Remove User"/>
+                    <Button Name="RemoveUserButton" Content="Remove User" Click="RemoveUserButton_Click"/>
+                    <Button Name="EditUserButton" Content="Edit User" Click="EditUserButton_Click"/>
                 </StackPanel>
             </TabItem>
         </TabControl>
