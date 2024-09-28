@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TabControl>
-            <TabItem Header="Input">
+            <!--<TabItem Header="Input">
                 <StackPanel HorizontalAlignment="Left">
                     <TextBlock Width="120" Text="Login" />
                     <TextBox Name="LoginInputBox" Width="120"  MaxLength="16" MaxLines="1"/>
@@ -31,7 +31,7 @@
                     </ComboBox>
                     <Button Name="InputButton" Content="Save" Width="120" Height="40"  Click="InputButton_Click"/>
                 </StackPanel>
-            </TabItem>
+            </TabItem>-->
             <TabItem Header="Output">
                 <WrapPanel>
                     <StackPanel HorizontalAlignment="Left">
@@ -60,6 +60,7 @@
                         </StackPanel>
                         <Button Name="RemoveUserButton" Content="Remove User" Click="RemoveUserButton_Click"/>
                         <Button Name="EditUserButton" Content="Edit User" Click="EditUserButton_Click"/>
+                        <Button Name="AddUserButton" Content="Add User" Click="AddUserButton_Click"/>
                     </StackPanel>
                     <ListBox Name="UserListBox" Width="120" SelectionChanged="UserListBox_SelectionChanged"/>
                 </WrapPanel>

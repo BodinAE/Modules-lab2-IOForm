@@ -16,34 +16,34 @@ namespace Modules_lab2_IOForm
     /// </summary>
     public partial class MainWindow : Window
     {   
-        List<User> Users = new List<User>();
+        internal static List<User> Users = new List<User>();
         public MainWindow()
         {
             InitializeComponent();
             UserListBox.ItemsSource = Users;
         }
 
-        private void InputButton_Click(object sender, RoutedEventArgs e)
-        {
-            string education = "None";
-            if (EducationCheckBox.IsChecked == true)
-            {
-                education = EducationInput.Text;
-            }
-            Users.Add(new User(LoginInputBox.Text, PasswordInputBox.Password, NameInputBox.Text, LastnameInputBox.Text, DoBInput.SelectedDate, education));
-            ResetInput();
-            UserListBox.Items.Refresh();
-        }
+        //private void InputButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    string education = "None";
+        //    if (EducationCheckBox.IsChecked == true)
+        //    {
+        //        education = EducationInput.Text;
+        //    }
+        //    Users.Add(new User(LoginInputBox.Text, PasswordInputBox.Password, NameInputBox.Text, LastnameInputBox.Text, DoBInput.SelectedDate, education));
+        //    ResetInput();
+        //    UserListBox.Items.Refresh();
+        //}
 
-        private void EducationCheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-            EducationInput.IsEnabled = true;
-        }
+        //private void EducationCheckBox_Checked(object sender, RoutedEventArgs e)
+        //{
+        //    EducationInput.IsEnabled = true;
+        //}
 
-        private void EducationCheckBox_Unchecked(object sender, RoutedEventArgs e)
-        {
-            EducationInput.IsEnabled = false;
-        }
+        //private void EducationCheckBox_Unchecked(object sender, RoutedEventArgs e)
+        //{
+        //    EducationInput.IsEnabled = false;
+        //}
 
         private void ResetOutput()
         {
@@ -55,16 +55,16 @@ namespace Modules_lab2_IOForm
             EducationOutput.SelectedIndex = -1;
         }
         
-        private void ResetInput()
-        {
-            LoginInputBox.Clear();
-            PasswordInputBox.Clear();
-            NameInputBox.Clear();
-            LastnameInputBox.Clear();
-            DoBInput.SelectedDate = null;
-            EducationCheckBox.IsChecked = false;
-            EducationInput.SelectedIndex = -1;
-        }
+        //private void ResetInput()
+        //{
+        //    LoginInputBox.Clear();
+        //    PasswordInputBox.Clear();
+        //    NameInputBox.Clear();
+        //    LastnameInputBox.Clear();
+        //    DoBInput.SelectedDate = null;
+        //    EducationCheckBox.IsChecked = false;
+        //    EducationInput.SelectedIndex = -1;
+        //}
 
         private void RemoveUserButton_Click(object sender, RoutedEventArgs e)
         {
@@ -98,7 +98,6 @@ namespace Modules_lab2_IOForm
                 PasswordOutput.Text = user.Password;
                 NameOutput.Text = user.Name;
                 LastnameOutput.Text = user.Lastname;
-                string? dob = DoBInput.SelectedDate.ToString();
                 DoBOutput.SelectedDate = user.DoB;
                 int eduIndex = 0;
                 switch (user.Education)
@@ -114,6 +113,13 @@ namespace Modules_lab2_IOForm
                 }
                 EducationOutput.SelectedIndex = eduIndex;
             }
+        }
+
+        private void AddUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            CreateUserWindow g = new CreateUserWindow();
+            g.mw = this;
+            g.ShowDialog();
         }
     }
 }
