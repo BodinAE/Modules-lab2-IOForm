@@ -9,71 +9,75 @@
     <Grid>
         <TabControl>
             <TabItem Header="Input">
-                <StackPanel>
-                    <TextBlock Width="120" Text="Login" HorizontalAlignment="Left"/>
-                    <TextBox Name="LoginInputBox" Width="120" HorizontalAlignment="Left" MaxLength="16" MaxLines="1"/>
-                    <TextBlock Width="120" Text="Password" HorizontalAlignment="Left"/>
-                    <PasswordBox Name="PasswordInputBox" Width="120" HorizontalAlignment="Left" MaxLength="16"/>
-                    <TextBlock Width="120" Text="Name" HorizontalAlignment="Left"/>
-                    <TextBox Name="NameInputBox" Width="120" HorizontalAlignment="Left" MaxLength="16" MaxLines="1"/>
-                    <TextBlock Width="120" Text="Lastname" HorizontalAlignment="Left"/>
-                    <TextBox Name="LastnameInputBox" Width="120" HorizontalAlignment="Left" MaxLength="16" MaxLines="1"/>
-                    <TextBlock Width="120" Text="Date of Birth" HorizontalAlignment="Left"/>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBox Name="DoBInputBoxDay" Width="20" HorizontalAlignment="Left" MaxLines="1" MaxLength="2"/>
+                <StackPanel HorizontalAlignment="Left">
+                    <TextBlock Width="120" Text="Login" />
+                    <TextBox Name="LoginInputBox" Width="120"  MaxLength="16" MaxLines="1"/>
+                    <TextBlock Width="120" Text="Password" />
+                    <PasswordBox Name="PasswordInputBox" Width="120"  MaxLength="16"/>
+                    <TextBlock Width="120" Text="Name" />
+                    <TextBox Name="NameInputBox" Width="120"  MaxLength="16" MaxLines="1"/>
+                    <TextBlock Width="120" Text="Lastname" />
+                    <TextBox Name="LastnameInputBox" Width="120"  MaxLength="16" MaxLines="1"/>
+                    <TextBlock Width="120" Text="Date of Birth" />
+                    <!--<StackPanel Orientation="Horizontal">
+                        <TextBox Name="DoBInputBoxDay" Width="20"  MaxLines="1" MaxLength="2"/>
                         <TextBlock Text=" . "/>
-                        <TextBox Name="DoBInputBoxMonth" Width="20" HorizontalAlignment="Left" MaxLength="2" MaxLines="1"/>
+                        <TextBox Name="DoBInputBoxMonth" Width="20"  MaxLength="2" MaxLines="1"/>
                         <TextBlock Text=" . "/>
-                        <TextBox Name="DoBInputBoxYear" Width="40" HorizontalAlignment="Left" MaxLines="1" MaxLength="4"/>
-                    </StackPanel>
+                        <TextBox Name="DoBInputBoxYear" Width="40"  MaxLines="1" MaxLength="4"/>
+                    </StackPanel>-->
+                    <DatePicker Name="DoBInput" Width="120"/>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Width="105" Text="Education" HorizontalAlignment="Left"/>
+                        <TextBlock Width="105" Text="Education" />
                         <CheckBox Name="EducationCheckBox" Checked="EducationCheckBox_Checked" Unchecked="EducationCheckBox_Unchecked"/>
                     </StackPanel>
-                    <ComboBox Name="EducationInput" Width="120" HorizontalAlignment="Left" IsEnabled="False">
+                    <ComboBox Name="EducationInput" Width="120"  IsEnabled="False">
                         <TextBlock Text="Low"/>
                         <TextBlock Text="Middle"/>
                         <TextBlock Text="High"/>
                     </ComboBox>
-                    <Button Name="InputButton" Content="Save" Width="120" Height="40" HorizontalAlignment="Left" Click="InputButton_Click"/>
-                    <TextBlock Name="InputError" HorizontalAlignment="Left"/>
+                    <Button Name="InputButton" Content="Save" Width="120" Height="40"  Click="InputButton_Click"/>
                 </StackPanel>
             </TabItem>
             <TabItem Header="Output">
-                <StackPanel HorizontalAlignment="Left">
-                    <ComboBox Name="OutputComboBox" DisplayMemberPath="Login" Width="120" SelectionChanged="OutputComboBox_SelectionChanged"/>
-                    <StackPanel Orientation="Horizontal">
-                        <StackPanel>
-                            <TextBlock Text="Login: " Height="20"/>
-                            <TextBlock Text="Password: " Height="20"/>
-                            <TextBlock Text="Name: " Height="20"/>
-                            <TextBlock Text="Lastname: " Height="20"/>
-                            <TextBlock Text="DoB: " Height="20"/>
-                            <TextBlock Text="Education: " Height="20"/>
-                        </StackPanel>
-                        <StackPanel>
-                            <TextBox Name="LoginOutput" Text="N/A" Height="20" Width="100"/>
-                            <TextBox Name="PasswordOutput" Text="N/A" Height="20" Width="100"/>
-                            <TextBox Name="NameOutput" Text="N/A" Height="20" Width="100"/>
-                            <TextBox Name="LastnameOutput" Text="N/A" Height="20" Width="100"/>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBox Name="DoBOutputBoxDay" Width="20" HorizontalAlignment="Left" Text="DD" MaxLines="1" MaxLength="2"/>
-                                <TextBlock Text=" . "/>
-                                <TextBox Name="DoBOutputBoxMonth" Width="20" HorizontalAlignment="Left" Text="MM" MaxLength="2" MaxLines="1"/>
-                                <TextBlock Text=" . "/>
-                                <TextBox Name="DoBOutputBoxYear" Width="40" HorizontalAlignment="Left" Text="YYYY" MaxLines="1" MaxLength="4"/>
+                <WrapPanel>
+                    <StackPanel HorizontalAlignment="Left">
+                        <!--<ComboBox Name="OutputComboBox" DisplayMemberPath="Login" Width="120" SelectionChanged="OutputComboBox_SelectionChanged"/>-->
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel>
+                                <TextBlock Text="Login: " Height="20"/>
+                                <TextBlock Text="Password: " Height="20"/>
+                                <TextBlock Text="Name: " Height="20"/>
+                                <TextBlock Text="Lastname: " Height="20"/>
+                                <TextBlock Text="DoB: " Height="20"/>
+                                <TextBlock Text="Education: " Height="20"/>
                             </StackPanel>
-                            <ComboBox Name="EducationOutput" Text="N/A" Height="20" Width="100">
-                                <TextBlock Text="None"/>
-                                <TextBlock Text="Low"/>
-                                <TextBlock Text="Middle"/>
-                                <TextBlock Text="High"/>
-                            </ComboBox>
+                            <StackPanel>
+                                <TextBox Name="LoginOutput" Text="N/A" Height="20" Width="100"/>
+                                <TextBox Name="PasswordOutput" Text="N/A" Height="20" Width="100"/>
+                                <TextBox Name="NameOutput" Text="N/A" Height="20" Width="100"/>
+                                <TextBox Name="LastnameOutput" Text="N/A" Height="20" Width="100"/>
+                                <!--<StackPanel Orientation="Horizontal">
+                                    <TextBox Name="DoBOutputBoxDay" Width="20" HorizontalAlignment="Left" Text="DD" MaxLines="1" MaxLength="2"/>
+                                    <TextBlock Text=" . "/>
+                                    <TextBox Name="DoBOutputBoxMonth" Width="20" HorizontalAlignment="Left" Text="MM" MaxLength="2" MaxLines="1"/>
+                                    <TextBlock Text=" . "/>
+                                    <TextBox Name="DoBOutputBoxYear" Width="40" HorizontalAlignment="Left" Text="YYYY" MaxLines="1" MaxLength="4"/>
+                                </StackPanel>-->
+                                <DatePicker Name="DoBOutput"/>
+                                <ComboBox Name="EducationOutput" Text="N/A" Height="20" Width="100">
+                                    <TextBlock Text="None"/>
+                                    <TextBlock Text="Low"/>
+                                    <TextBlock Text="Middle"/>
+                                    <TextBlock Text="High"/>
+                                </ComboBox>
+                            </StackPanel>
                         </StackPanel>
+                        <Button Name="RemoveUserButton" Content="Remove User" Click="RemoveUserButton_Click"/>
+                        <Button Name="EditUserButton" Content="Edit User" Click="EditUserButton_Click"/>
                     </StackPanel>
-                    <Button Name="RemoveUserButton" Content="Remove User" Click="RemoveUserButton_Click"/>
-                    <Button Name="EditUserButton" Content="Edit User" Click="EditUserButton_Click"/>
-                </StackPanel>
+                    <ListBox Name="UserListBox" Width="120" SelectionChanged="UserListBox_SelectionChanged"/>
+                </WrapPanel>
             </TabItem>
         </TabControl>
     </Grid>

@@ -12,10 +12,10 @@ namespace Modules_lab2_IOForm
         public string Password { get; set; }
         public string Name { get; set; }
         public string Lastname { get; set; }
-        public string DoB { get; set; }
+        public DateTime? DoB { get; set; }
         public string Education { get; set; }
         
-        public User(string login, string password, string name, string lastname, string dob, string education)
+        public User(string login, string password, string name, string lastname, DateTime? dob, string education)
         {
             Login = login;
             Password = password;
