@@ -5,66 +5,58 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Modules_lab2_IOForm"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Background="Chartreuse"
+        Foreground="#634263"
+        FontFamily="Comic Sans MS" 
+        FontWeight="Bold"
+        FontSize="16">
     <Grid>
-        <TabControl>
-            <!--<TabItem Header="Input">
-                <StackPanel HorizontalAlignment="Left">
-                    <TextBlock Width="120" Text="Login" />
-                    <TextBox Name="LoginInputBox" Width="120"  MaxLength="16" MaxLines="1"/>
-                    <TextBlock Width="120" Text="Password" />
-                    <PasswordBox Name="PasswordInputBox" Width="120"  MaxLength="16"/>
-                    <TextBlock Width="120" Text="Name" />
-                    <TextBox Name="NameInputBox" Width="120"  MaxLength="16" MaxLines="1"/>
-                    <TextBlock Width="120" Text="Lastname" />
-                    <TextBox Name="LastnameInputBox" Width="120"  MaxLength="16" MaxLines="1"/>
-                    <TextBlock Width="120" Text="Date of Birth" />
-                    <DatePicker Name="DoBInput" Width="120"/>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Width="105" Text="Education" />
-                        <CheckBox Name="EducationCheckBox" Checked="EducationCheckBox_Checked" Unchecked="EducationCheckBox_Unchecked"/>
+        <WrapPanel>
+            <StackPanel HorizontalAlignment="Left">
+
+                
+                    <StackPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Login: " Height="20"/>
+                            <TextBox Name="LoginOutput" Text="N/A" Height="20" Width="100"/>
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Password: " Height="20"/>
+                            <TextBox Name="PasswordOutput" Text="N/A" Height="20" Width="100"/>
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Name: " Height="20"/>
+                            <TextBox Name="NameOutput" Text="N/A" Height="20" Width="100"/>
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Lastname: " Height="20"/>
+                            <TextBox Name="LastnameOutput" Text="N/A" Height="20" Width="100"/>
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="DoB: " Height="25"/>
+                            <DatePicker Name="DoBOutput" Height="25" Width="100" FontSize="12" FontFamily="Segoe UI" FontWeight="Normal"/>
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Education: " Height="20"/>
+                            <ComboBox Name="EducationOutput" Text="N/A" Height="20" Width="100">
+                                <TextBlock Text="None"/>
+                                <TextBlock Text="Low"/>
+                                <TextBlock Text="Middle"/>
+                                <TextBlock Text="High"/>
+                            </ComboBox>
+                        </WrapPanel>
+
+
+
                     </StackPanel>
-                    <ComboBox Name="EducationInput" Width="120"  IsEnabled="False">
-                        <TextBlock Text="Low"/>
-                        <TextBlock Text="Middle"/>
-                        <TextBlock Text="High"/>
-                    </ComboBox>
-                    <Button Name="InputButton" Content="Save" Width="120" Height="40"  Click="InputButton_Click"/>
-                </StackPanel>
-            </TabItem>-->
-            <TabItem Header="Output">
-                <WrapPanel>
-                    <StackPanel HorizontalAlignment="Left">
-                        <StackPanel Orientation="Horizontal">
-                            <StackPanel>
-                                <TextBlock Text="Login: " Height="20"/>
-                                <TextBlock Text="Password: " Height="20"/>
-                                <TextBlock Text="Name: " Height="20"/>
-                                <TextBlock Text="Lastname: " Height="20"/>
-                                <TextBlock Text="DoB: " Height="25"/>
-                                <TextBlock Text="Education: " Height="20"/>
-                            </StackPanel>
-                            <StackPanel>
-                                <TextBox Name="LoginOutput" Text="N/A" Height="20" Width="100"/>
-                                <TextBox Name="PasswordOutput" Text="N/A" Height="20" Width="100"/>
-                                <TextBox Name="NameOutput" Text="N/A" Height="20" Width="100"/>
-                                <TextBox Name="LastnameOutput" Text="N/A" Height="20" Width="100"/>
-                                <DatePicker Name="DoBOutput" Height="25" Width="100"/>
-                                <ComboBox Name="EducationOutput" Text="N/A" Height="20" Width="100">
-                                    <TextBlock Text="None"/>
-                                    <TextBlock Text="Low"/>
-                                    <TextBlock Text="Middle"/>
-                                    <TextBlock Text="High"/>
-                                </ComboBox>
-                            </StackPanel>
-                        </StackPanel>
-                        <Button Name="RemoveUserButton" Content="Remove User" Click="RemoveUserButton_Click"/>
-                        <Button Name="EditUserButton" Content="Edit User" Click="EditUserButton_Click"/>
-                        <Button Name="AddUserButton" Content="Add User" Click="AddUserButton_Click"/>
-                    </StackPanel>
-                    <ListBox Name="UserListBox" Width="120" SelectionChanged="UserListBox_SelectionChanged"/>
-                </WrapPanel>
-            </TabItem>
-        </TabControl>
+
+                    
+                <Button Name="RemoveUserButton" Content="Remove User" Click="RemoveUserButton_Click"/>
+                <Button Name="EditUserButton" Content="Edit User" Click="EditUserButton_Click"/>
+                <Button Name="AddUserButton" Content="Add User" Click="AddUserButton_Click"/>
+            </StackPanel>
+            <ListBox Name="UserListBox" Width="120" SelectionChanged="UserListBox_SelectionChanged"/>
+        </WrapPanel>
     </Grid>
 </Window>

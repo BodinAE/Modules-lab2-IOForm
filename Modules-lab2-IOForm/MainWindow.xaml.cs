@@ -117,9 +117,10 @@ namespace Modules_lab2_IOForm
 
         private void AddUserButton_Click(object sender, RoutedEventArgs e)
         {
-            CreateUserWindow g = new CreateUserWindow();
-            g.mw = this;
-            g.ShowDialog();
+            CreateUserWindow CreateUser = new CreateUserWindow();
+            CreateUser.Owner = this;
+            CreateUser.mw = this;
+            CreateUser.ShowDialog();
         }
     }
 }
