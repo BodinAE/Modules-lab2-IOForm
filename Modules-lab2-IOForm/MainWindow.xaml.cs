@@ -44,31 +44,7 @@ namespace Modules_lab2_IOForm
         {
             EducationInput.IsEnabled = false;
         }
-        //private void OutputComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        //{
-        //    if (OutputComboBox.SelectedItem is User user) 
-        //    {
-        //        LoginOutput.Text = user.Login;
-        //        PasswordOutput.Text = user.Password;
-        //        NameOutput.Text = user.Name;
-        //        LastnameOutput.Text = user.Lastname;
-        //        string? dob = DoBInput.SelectedDate.ToString();
-        //        DoBOutput.SelectedDate = user.DoB;
-        //        int eduIndex = 0;
-        //        switch (user.Education)
-        //        {
-        //            case "None":
-        //                eduIndex = 0; break;
-        //            case "Low":
-        //                eduIndex = 1; break;
-        //            case "Medium":
-        //                eduIndex = 2; break;
-        //            case "High":
-        //                eduIndex = 3; break;
-        //        }
-        //        EducationOutput.SelectedIndex = eduIndex;
-        //    }
-        //}
+
         private void ResetOutput()
         {
             LoginOutput.Text = "N/A";

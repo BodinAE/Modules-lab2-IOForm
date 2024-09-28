@@ -42,7 +42,6 @@
             <TabItem Header="Output">
                 <WrapPanel>
                     <StackPanel HorizontalAlignment="Left">
-                        <!--<ComboBox Name="OutputComboBox" DisplayMemberPath="Login" Width="120" SelectionChanged="OutputComboBox_SelectionChanged"/>-->
                         <StackPanel Orientation="Horizontal">
                             <StackPanel>
                                 <TextBlock Text="Login: " Height="20"/>
@@ -57,13 +56,6 @@
                                 <TextBox Name="PasswordOutput" Text="N/A" Height="20" Width="100"/>
                                 <TextBox Name="NameOutput" Text="N/A" Height="20" Width="100"/>
                                 <TextBox Name="LastnameOutput" Text="N/A" Height="20" Width="100"/>
-                                <!--<StackPanel Orientation="Horizontal">
-                                    <TextBox Name="DoBOutputBoxDay" Width="20" HorizontalAlignment="Left" Text="DD" MaxLines="1" MaxLength="2"/>
-                                    <TextBlock Text=" . "/>
-                                    <TextBox Name="DoBOutputBoxMonth" Width="20" HorizontalAlignment="Left" Text="MM" MaxLength="2" MaxLines="1"/>
-                                    <TextBlock Text=" . "/>
-                                    <TextBox Name="DoBOutputBoxYear" Width="40" HorizontalAlignment="Left" Text="YYYY" MaxLines="1" MaxLength="4"/>
-                                </StackPanel>-->
                                 <DatePicker Name="DoBOutput" Height="25" Width="100"/>
                                 <ComboBox Name="EducationOutput" Text="N/A" Height="20" Width="100">
                                     <TextBlock Text="None"/>
