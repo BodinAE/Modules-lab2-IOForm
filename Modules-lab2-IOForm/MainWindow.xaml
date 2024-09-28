@@ -19,13 +19,6 @@
                     <TextBlock Width="120" Text="Lastname" />
                     <TextBox Name="LastnameInputBox" Width="120"  MaxLength="16" MaxLines="1"/>
                     <TextBlock Width="120" Text="Date of Birth" />
-                    <!--<StackPanel Orientation="Horizontal">
-                        <TextBox Name="DoBInputBoxDay" Width="20"  MaxLines="1" MaxLength="2"/>
-                        <TextBlock Text=" . "/>
-                        <TextBox Name="DoBInputBoxMonth" Width="20"  MaxLength="2" MaxLines="1"/>
-                        <TextBlock Text=" . "/>
-                        <TextBox Name="DoBInputBoxYear" Width="40"  MaxLines="1" MaxLength="4"/>
-                    </StackPanel>-->
                     <DatePicker Name="DoBInput" Width="120"/>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Width="105" Text="Education" />
