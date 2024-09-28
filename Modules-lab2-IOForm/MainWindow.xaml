@@ -49,7 +49,7 @@
                                 <TextBlock Text="Password: " Height="20"/>
                                 <TextBlock Text="Name: " Height="20"/>
                                 <TextBlock Text="Lastname: " Height="20"/>
-                                <TextBlock Text="DoB: " Height="20"/>
+                                <TextBlock Text="DoB: " Height="25"/>
                                 <TextBlock Text="Education: " Height="20"/>
                             </StackPanel>
                             <StackPanel>
@@ -64,7 +64,7 @@
                                     <TextBlock Text=" . "/>
                                     <TextBox Name="DoBOutputBoxYear" Width="40" HorizontalAlignment="Left" Text="YYYY" MaxLines="1" MaxLength="4"/>
                                 </StackPanel>-->
-                                <DatePicker Name="DoBOutput"/>
+                                <DatePicker Name="DoBOutput" Height="25" Width="100"/>
                                 <ComboBox Name="EducationOutput" Text="N/A" Height="20" Width="100">
                                     <TextBlock Text="None"/>
                                     <TextBlock Text="Low"/>
